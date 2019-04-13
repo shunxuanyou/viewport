@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 40px;
+            margin: 0 auto;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        window.addEventListener('load',function () {
+            let container=document.querySelector('.container');
+            let clientW=0;
+            resize();
+
+            // 监听窗口的变化
+            window.addEventListener('resize',resize);
+
+            function resize() {
+                clientW=window.innerWidth;
+                console.log(clientW);
+                if(clientW>=1200){//超大屏幕
+                    container.style.width='1170px';
+                }else if(clientW>=992){//大屏幕
+                    container.style.width='970px';
+                }else if(clientW>=768){//小屏幕
+                    container.style.width='750px';
+                }else{//超小屏幕
+                    container.style.width='100%';
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

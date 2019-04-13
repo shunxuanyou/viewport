@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .hd{
+            width: 900px;
+            height: 500px;
+            border: 1px solid chocolate;
+            margin: 200px auto;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            /*均分*/
+            /*justify-content: space-around;*/
+            /*占满*/
+            justify-content: space-between;
+            align-items: baseline;
+            /*align-items: flex-end;*/
+            /*align-items: stretch;*/
+            flex-wrap: wrap;
+            /*定义换行时的排列方式*/
+            align-content: center;
+        }
+        .hd div{
+            width: 100px;
+            height: 150px;
+            box-sizing: border-box;
+            background-color: cornflowerblue;
+            color: whitesmoke;
+            text-align: center;
+            line-height: 150px;
+            border: 1px solid #c1e2b3;
+            /*设置宽度的比例*/
+            flex: 1;
+
+        }
+        .hd div:nth-child(1){
+            order: 2;
+        }
+        .hd div:nth-child(2){
+            order: 3;
+        }
+        .hd div:nth-child(3){
+            flex: 2;
+        }
+        .hd div:nth-child(5){
+            flex: 3;
+        }
+        .hd div:nth-child(6){
+            flex-grow: 12;
+        }
+        .hd div:nth-child(7){
+            flex-grow: 12;
+        }
+        .hd div:nth-child(8){
+            flex-grow: 12;
+        }
+    </style>
+</head>
+<body>
+    <div class="hd">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>8</div>
+        <div>8</div>
+        <div>8</div>
+        <div>8</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 100%;
+            height: 1rem;
+            text-align: center;
+            line-height: 1rem;
+            font-size: 0.20rem;
+            background-color: cornflowerblue;
+        }
+        html{
+            font-size: 100px;
+        }
+
+        /*
+            根据html根元素字体大小，设置屏幕区域的宽
+            iphone5      分辨率320   1rem=100px   html{font-size: 100px;}(参照物)
+            iphone6      分辨率375   375*100/320  html{font-size:117.1875px;}
+            iphone6plus  分辨率414   414*100/320  html{font-size:129.375px;}
+        */
+        @media screen and (min-width: 320px) {
+            html{
+                font-size: 100px;
+                background-color: rebeccapurple;
+            }
+        }
+        @media screen and (min-width: 375px) {
+            html{
+                font-size: 117.1875px;
+                background-color: chocolate;
+            }
+        }
+        @media screen and (min-width: 414px) {
+            html{
+                font-size: 129.375px;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">独孤求败</header>
+</body>
+</html>

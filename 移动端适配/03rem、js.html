@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        // 根据html根元素字体大小设置屏幕区域的宽
+        window.onload=function () {
+            // 获取屏幕区域的宽
+            let width=document.documentElement.clientWidth;
+            // 获取html元素
+            let htmlNode=document.querySelector('html');
+            // 设置字体大小
+            htmlNode.style.fontSize=width+'px'
+        }
+    </script>
+
+</body>
+</html>
